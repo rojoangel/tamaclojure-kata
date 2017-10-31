@@ -3,14 +3,6 @@
             [tamagotchi.core :refer :all]
             [spexec.core :refer :all]))
 
-(defn born []
-  {:hungriness 50 :fullness 50})
-
-(defn feed [tamagotchi]
-  (-> tamagotchi
-      (update :hungriness dec)
-      (update :fullness inc)))
-
 (defgiven #"I have a Tamagotchi"
           [_]
           (born))
