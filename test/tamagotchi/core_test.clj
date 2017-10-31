@@ -6,9 +6,16 @@
 (defn born []
   {})
 
+(defn feed [tamagotchi]
+  tamagotchi)
+
 (defgiven #"I have a Tamagotchi"
           [_]
           (born))
+
+(defwhen #"I feed it"
+         [tamagotchi]
+         (feed tamagotchi))
 
 ;; run specs
 (exec-spec "resources/tamagotchi.feature")
