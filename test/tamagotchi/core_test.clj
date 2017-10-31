@@ -4,10 +4,12 @@
             [spexec.core :refer :all]))
 
 (defn born []
-  {:hungriness 50})
+  {:hungriness 50 :fullness 50})
 
 (defn feed [tamagotchi]
-  (update tamagotchi :hungriness dec))
+  (-> tamagotchi
+      (update :hungriness dec)
+      (update :fullness inc)))
 
 (defgiven #"I have a Tamagotchi"
           [_]
@@ -21,6 +23,12 @@
          [tamagotchi]
          (do
            (is (= 49 (:hungriness tamagotchi)))
+           tamagotchi))
+
+(defwhen #"its fullness is increased"
+         [tamagotchi]
+         (do
+           (is (= 51 (:fullness tamagotchi)))
            tamagotchi))
 
 ;; run specs
