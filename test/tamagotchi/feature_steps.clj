@@ -15,7 +15,6 @@
          [tamagotchi]
          (tamagotchi/play tamagotchi))
 
-
 (defthen #"its hungriness is decreased"
          [tamagotchi]
          (do
@@ -28,4 +27,11 @@
          (do
            (is (= (inc tamagotchi/default-fullness)
                   (:fullness tamagotchi)))
+           tamagotchi))
+
+(defthen #"its happiness is increased"
+         [tamagotchi]
+         (do
+           (is (= (inc tamagotchi/default-happiness)
+                  (:happiness tamagotchi)))
            tamagotchi))
