@@ -11,6 +11,11 @@
          [tamagotchi]
          (tamagotchi/feed tamagotchi))
 
+(defwhen #"I play with it"
+         [tamagotchi]
+         (tamagotchi/play tamagotchi))
+
+
 (defthen #"its hungriness is decreased"
          [tamagotchi]
          (do
@@ -18,7 +23,7 @@
                   (:hungriness tamagotchi)))
            tamagotchi))
 
-(defwhen #"its fullness is increased"
+(defthen #"its fullness is increased"
          [tamagotchi]
          (do
            (is (= (inc tamagotchi/default-fullness)

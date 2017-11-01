@@ -18,3 +18,6 @@
   (-> tamagotchi
       (update :hungriness dec)
       (update :fullness inc)))
+
+(defn play [tamagotchi]
+  tamagotchi)
