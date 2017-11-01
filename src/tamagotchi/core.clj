@@ -40,4 +40,5 @@
 
 (defn tic [tamagotchi]
   (-> tamagotchi
-      (update :hungriness inc)))
+      (update :hungriness inc)
+      (update :happiness dec)))

@@ -75,3 +75,10 @@
            (is (= (inc tamagotchi/default-hungriness)
                   (:hungriness tamagotchi)))
            tamagotchi))
+
+(defthen #"its happiness is decreased"
+         [tamagotchi]
+         (do
+           (is (= (dec tamagotchi/default-happiness)
+                  (:happiness tamagotchi)))
+           tamagotchi))
