@@ -20,4 +20,4 @@ Then its tiredness is decreased
 Scenario: As a Tamagotchi owner I want to make my Tamagotchi poop so that it is more comfortable
 Given I have a Tamagotchi
 When I make it poop
-Then it's fullness is decreased
+Then its fullness is decreased

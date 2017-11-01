@@ -57,3 +57,10 @@
            (is (= (dec tamagotchi/default-tiredness)
                   (:tiredness tamagotchi)))
            tamagotchi))
+
+(defthen #"its fullness is decreased"
+         [tamagotchi]
+         (do
+           (is (= (dec tamagotchi/default-fullness)
+                  (:fullness tamagotchi)))
+           tamagotchi))

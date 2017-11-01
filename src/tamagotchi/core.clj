@@ -35,4 +35,5 @@
       (update :tiredness dec)))
 
 (defn poo [tamagotchi]
-  tamagotchi)
+  (-> tamagotchi
+      (update :fullness dec)))
