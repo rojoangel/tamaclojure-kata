@@ -37,3 +37,6 @@
 (defn poo [tamagotchi]
   (-> tamagotchi
       (update :fullness dec)))
+
+(defn tic [tamagotchi]
+  tamagotchi)

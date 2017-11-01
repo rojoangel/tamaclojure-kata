@@ -23,6 +23,10 @@
          [tamagotchi]
          (tamagotchi/poo tamagotchi))
 
+(defwhen #"time passes"
+         [tamagotchi]
+         (tamagotchi/tic tamagotchi))
+
 (defthen #"its hungriness is decreased"
          [tamagotchi]
          (do
