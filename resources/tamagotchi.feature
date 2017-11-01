@@ -11,3 +11,8 @@ Given I have a Tamagotchi
 When I play with it
 Then its happiness is increased
 And its tiredness is increased
+
+Scenario: As a Tamagotchi owner I want to put my Tamagotchi to bed so that I can refill it's energy
+Given I have a Tamagotchi
+When I put it to bed
+Then its tiredness is decreased
