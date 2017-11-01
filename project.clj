@@ -5,4 +5,6 @@
             :url  "http://www.eclipse.org/legal/epl-v10.html"}
   :dependencies [[org.clojure/clojure "1.8.0"]
                  [spexec "1.2.0"]]
-  :plugins [[lein-auto "0.1.3"]])
+  :plugins [[lein-auto "0.1.3"]]
+  :auto {"test" {:file-pattern #"\.(clj|cljs|cljx|cljc|edn|feature)$"
+                 :paths ["src" "test" "resources"]}})
