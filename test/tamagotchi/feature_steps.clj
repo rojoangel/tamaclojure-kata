@@ -3,6 +3,8 @@
             [spexec.core :refer :all]
             [tamagotchi.core :refer :all]))
 
+(def initial-hungriness 50)
+
 (defgiven #"I have a Tamagotchi"
           [_]
           (born))
@@ -14,11 +16,11 @@
 (defthen #"its hungriness is decreased"
          [tamagotchi]
          (do
-           (is (= 49 (:hungriness tamagotchi)))
+           (is (= (dec default-hungriness) (:hungriness tamagotchi)))
            tamagotchi))
 
 (defwhen #"its fullness is increased"
          [tamagotchi]
          (do
-           (is (= 51 (:fullness tamagotchi)))
+           (is (= (inc default-fullness) (:fullness tamagotchi)))
            tamagotchi))
