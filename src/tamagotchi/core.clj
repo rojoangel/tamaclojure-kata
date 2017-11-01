@@ -29,3 +29,6 @@
   (-> tamagotchi
       (update :happiness inc)
       (update :tiredness dec)))
+
+(defn put-to-bed [tamagotchi]
+  tamagotchi)

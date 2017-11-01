@@ -15,6 +15,11 @@
          [tamagotchi]
          (tamagotchi/play tamagotchi))
 
+(defwhen #"I put it to bed"
+         [tamagotchi]
+         (tamagotchi/put-to-bed tamagotchi))
+
+
 (defthen #"its hungriness is decreased"
          [tamagotchi]
          (do
