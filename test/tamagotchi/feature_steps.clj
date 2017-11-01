@@ -1,7 +1,7 @@
-(ns tamagotchi.core-test
+(ns tamagotchi.feature-steps
   (:require [clojure.test :refer :all]
-            [tamagotchi.core :refer :all]
-            [spexec.core :refer :all]))
+            [spexec.core :refer :all]
+            [tamagotchi.core :refer :all]))
 
 (defgiven #"I have a Tamagotchi"
           [_]
@@ -22,6 +22,3 @@
          (do
            (is (= 51 (:fullness tamagotchi)))
            tamagotchi))
-
-;; run specs
-(exec-spec "resources/tamagotchi.feature")
