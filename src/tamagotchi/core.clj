@@ -1,7 +1,18 @@
 (ns tamagotchi.core)
 
-(defn born []
-  {:hungriness 50 :fullness 50})
+(def default-hungriness 50)
+(def default-fullness 50)
+
+(defn born
+  ([]
+   (born
+     default-hungriness
+     default-fullness))
+  ([hungriness fullness]
+   (assoc
+     {}
+     :hungriness hungriness
+     :fullness fullness)))
 
 (defn feed [tamagotchi]
   (-> tamagotchi
