@@ -19,6 +19,10 @@
          [tamagotchi]
          (tamagotchi/put-to-bed tamagotchi))
 
+(defwhen #"I make it poop"
+         [tamagotchi]
+         (tamagotchi/poo tamagotchi))
+
 (defthen #"its hungriness is decreased"
          [tamagotchi]
          (do

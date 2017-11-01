@@ -33,3 +33,6 @@
 (defn put-to-bed [tamagotchi]
   (-> tamagotchi
       (update :tiredness dec)))
+
+(defn poo [tamagotchi]
+  tamagotchi)
