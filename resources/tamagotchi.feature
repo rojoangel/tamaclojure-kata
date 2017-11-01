@@ -16,3 +16,8 @@ Scenario: As a Tamagotchi owner I want to put my Tamagotchi to bed so that I can
 Given I have a Tamagotchi
 When I put it to bed
 Then its tiredness is decreased
+
+Scenario: As a Tamagotchi owner I want to make my Tamagotchi poop so that it is more comfortable
+Given I have a Tamagotchi
+When I make it poop
+Then it's fullness is decreased
