@@ -19,7 +19,6 @@
          [tamagotchi]
          (tamagotchi/put-to-bed tamagotchi))
 
-
 (defthen #"its hungriness is decreased"
          [tamagotchi]
          (do
@@ -42,6 +41,13 @@
            tamagotchi))
 
 (defthen #"its tiredness is increased"
+         [tamagotchi]
+         (do
+           (is (= (inc tamagotchi/default-tiredness)
+                  (:tiredness tamagotchi)))
+           tamagotchi))
+
+(defthen #"its tiredness is decreased"
          [tamagotchi]
          (do
            (is (= (dec tamagotchi/default-tiredness)

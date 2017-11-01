@@ -28,7 +28,8 @@
 (defn play [tamagotchi]
   (-> tamagotchi
       (update :happiness inc)
-      (update :tiredness dec)))
+      (update :tiredness inc)))
 
 (defn put-to-bed [tamagotchi]
-  tamagotchi)
+  (-> tamagotchi
+      (update :tiredness dec)))
