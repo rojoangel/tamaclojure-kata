@@ -21,3 +21,10 @@ Scenario: As a Tamagotchi owner I want to make my Tamagotchi poop so that it is 
 Given I have a Tamagotchi
 When I make it poop
 Then its fullness is decreased
+
+Scenario: As a Tamagotchi owner I want my Tamagotchi's needs to change over time so that I have to look after it carefully
+Given I have a Tamagotchi
+When time passes
+Then its tiredness is increased
+And its hungriness is increased
+And its happiness is decreased
