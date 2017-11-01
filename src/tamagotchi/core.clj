@@ -3,19 +3,22 @@
 (def default-hungriness 50)
 (def default-fullness 50)
 (def default-happiness 50)
+(def default-tiredness 50)
 
 (defn born
   ([]
    (born
      default-hungriness
      default-fullness
-     default-happiness))
-  ([hungriness fullness happiness]
+     default-happiness
+     default-tiredness))
+  ([hungriness fullness happiness tiredness]
    (assoc
      {}
      :hungriness hungriness
      :fullness fullness
-     :happiness happiness)))
+     :happiness happiness
+     :tiredness tiredness)))
 
 (defn feed [tamagotchi]
   (-> tamagotchi
@@ -24,4 +27,5 @@
 
 (defn play [tamagotchi]
   (-> tamagotchi
-      (update :happiness inc)))
+      (update :happiness inc)
+      (update :tiredness dec)))

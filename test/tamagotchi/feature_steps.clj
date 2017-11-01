@@ -35,3 +35,10 @@
            (is (= (inc tamagotchi/default-happiness)
                   (:happiness tamagotchi)))
            tamagotchi))
+
+(defthen #"its tiredness is increased"
+         [tamagotchi]
+         (do
+           (is (= (dec tamagotchi/default-tiredness)
+                  (:tiredness tamagotchi)))
+           tamagotchi))
