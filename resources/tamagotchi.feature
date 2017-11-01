@@ -5,3 +5,9 @@ Given I have a Tamagotchi
 When I feed it
 Then its hungriness is decreased
 And its fullness is increased
+
+Scenario: As a Tamagotchi owner I want to play with my Tamagotchi so that I can make it happier
+Given I have a Tamagotchi
+When I play with it
+Then its happiness is increased
+And its tiredness is increased
